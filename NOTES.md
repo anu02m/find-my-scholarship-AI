@@ -1,5 +1,5 @@
 # Engineering Notes
-
+Github Link - https://github.com/anu02m/find-my-scholarship-AI
 ### Most Interesting Experiment: Anti-Hallucination Deadline Verification
 Most scholarship aggregators hallucinate application deadlines when dates are omitted from search snippets. We designed a strict grounding constraint across the Eligibility and Ranking agents: deadlines are extracted exclusively from raw page text fetched via Tavily Extract. If an exact deadline date is not explicitly present in the source text, the model is strictly constrained to return `"not found"`. Testing confirmed this completely eliminates hallucinated cut-off dates while accurately preserving verified dates in the UI.
 
