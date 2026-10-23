@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FindMyScholarshipAI - Academic & Scholarship Discovery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="badge">AI-Powered Academic Intelligence</div>
+      <h1>FindMyScholarship<span class="gradient-text">AI</span></h1>
+      <p class="subtitle">5 autonomous agents evaluate your profile, verify real opportunities worldwide, and draft your custom SOP.</p>
+    </header>
+
+    <!-- Main Form -->
+    <section class="card form-card">
+      <form id="scholarshipForm" enctype="multipart/form-data">
+        <div class="form-grid">
+          <!-- Resume Upload -->
+          <div class="form-group file-group">
+            <label for="resume">Resume (PDF)</label>
+            <div class="file-drop-zone">
+              <input type="file" id="resume" name="resume" accept=".pdf">
+              <div class="file-label" id="resumeLabel">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span class="file-name">Select Resume PDF</span>
+                <span class="file-hint">Optional / Up to 15MB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marksheet Upload -->
+          <div class="form-group file-group">
+            <label for="marksheet">Marksheet / Transcript (PDF)</label>
+            <div class="file-drop-zone">
+              <input type="file" id="marksheet" name="marksheet" accept=".pdf">
+              <div class="file-label" id="marksheetLabel">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                <span class="file-name">Select Marksheet PDF</span>
+                <span class="file-hint">Optional / Up to 15MB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- GitHub Username -->
+          <div class="form-group">
+            <label for="github_username">GitHub Username</label>
+            <div class="input-with-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <input type="text" id="github_username" name="github_username" placeholder="e.g. torvalds">
+            </div>
+          </div>
+
+          <!-- Target Countries -->
+          <div class="form-group">
+            <label for="target_countries">Target Countries</label>
+            <div class="input-with-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <input type="text" id="target_countries" name="target_countries" value="Canada, Germany, Singapore">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="demoBtn" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span id="demoBtnText">Load demo result</span>
+          </button>
+          <button type="submit" id="submitBtn" class="btn btn-primary">
+            <span class="btn-spinner hidden" id="btnSpinner"></span>
+            <span class="btn-text" id="btnText">Run AI Agents</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Agent Pipeline Stream Cards -->
+    <section class="agents-section">
+      <div class="section-header">
+        <h2>Autonomous Agent Pipeline</h2>
+        <span class="live-pill" id="livePill">Ready</span>
+      </div>
+
+      <div class="agents-grid">
+        <!-- Card 1: Profile -->
+        <div class="agent-card idle" id="card-profile" data-agent="profile">
+          <div class="agent-card-header">
+            <div class="agent-info">
+              <span class="agent-step">1</span>
+              <h3>Profile Agent</h3>
+            </div>
+            <div class="status-indicator">
+              <span class="spinner"></span>
+              <span class="status-badge">Idle</span>
+            </div>
+          </div>
+          <p class="agent-description">Extracts skills, CGPA, projects & GitHub repos</p>
+          <div class="agent-message">Waiting to start...</div>
+        </div>
+
+        <!-- Card 2: Discovery -->
+        <div class="agent-card idle" id="card-discovery" data-agent="discovery">
+          <div class="agent-card-header">
+            <div class="agent-info">
+              <span class="agent-step">2</span>
+              <h3>Discovery Agent</h3>
+            </div>
+            <div class="status-indicator">
+              <span class="spinner"></span>
+              <span class="status-badge">Idle</span>
+            </div>
+          </div>
+          <p class="agent-description">Searches Tavily for 10+ active opportunities</p>
+          <div class="agent-message">Waiting to start...</div>
+        </div>
+
+        <!-- Card 3: Eligibility -->
+        <div class="agent-card idle" id="card-eligibility" data-agent="eligibility">
+          <div class="agent-card-header">
+            <div class="agent-info">
+              <span class="agent-step">3</span>
+              <h3>Eligibility Agent</h3>
+            </div>
+            <div class="status-indicator">
+              <span class="spinner"></span>
+              <span class="status-badge">Idle</span>
+            </div>
+          </div>
+          <p class="agent-description">Tavily Extract & Gemini checks (3-batch limit)</p>
+          <div class="agent-message">Waiting to start...</div>
+        </div>
+
+        <!-- Card 4: Ranking -->
+        <div class="agent-card idle" id="card-ranking" data-agent="ranking">
+          <div class="agent-card-header">
+            <div class="agent-info">
+              <span class="agent-step">4</span>
+              <h3>Ranking Agent</h3>
+            </div>
+            <div class="status-indicator">
+              <span class="spinner"></span>
+              <span class="status-badge">Idle</span>
+            </div>
+          </div>
+          <p class="agent-description">Filters top 5 with strict deadline verification</p>
+          <div class="agent-message">Waiting to start...</div>
+        </div>
+
+        <!-- Card 5: SOP -->
+        <div class="agent-card idle" id="card-sop" data-agent="sop">
+          <div class="agent-card-header">
+            <div class="agent-info">
+              <span class="agent-step">5</span>
+              <h3>SOP Agent</h3>
+            </div>
+            <div class="status-indicator">
+              <span class="spinner"></span>
+              <span class="status-badge">Idle</span>
+            </div>
+          </div>
+          <p class="agent-description">Drafts tailored Statement of Purpose for #1</p>
+          <div class="agent-message">Waiting to start...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section hidden" id="resultsSection">
+      <!-- Top 5 Opportunities -->
+      <div class="results-header">
+        <h2>Top 5 Recommended Opportunities</h2>
+        <p class="section-subtext">Curated, verified, and ranked based on your profile match score.</p>
+      </div>
+
+      <div class="opportunities-grid" id="opportunitiesContainer">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Statement of Purpose (SOP) -->
+      <div class="sop-card card">
+        <div class="sop-header">
+          <div>
+            <h2>Statement of Purpose Draft</h2>
+            <p class="sop-subtext" id="sopSubtitle">Customized for your top-ranked opportunity</p>
+          </div>
+          <button type="button" class="btn btn-secondary copy-btn" id="copySopBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="copyBtnText">Copy SOP</span>
+          </button>
+        </div>
+        <textarea id="sopTextArea" class="sop-textarea" readonly placeholder="Your Statement of Purpose will appear here..."></textarea>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

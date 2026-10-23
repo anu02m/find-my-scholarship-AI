@@ -1,0 +1,112 @@
+{
+  "events": [
+    {
+      "agent": "profile",
+      "status": "working",
+      "message": "Extracting candidate profile from documents and GitHub..."
+    },
+    {
+      "agent": "profile",
+      "status": "done",
+      "message": "Extracted candidate profile: 12 technical skills, verified academic standing, and 6 repositories."
+    },
+    {
+      "agent": "discovery",
+      "status": "working",
+      "message": "Searching scholarship opportunities for: Canada, Germany, Singapore..."
+    },
+    {
+      "agent": "discovery",
+      "status": "done",
+      "message": "Discovered 11 real scholarship and grant programs with official links."
+    },
+    {
+      "agent": "eligibility",
+      "status": "working",
+      "message": "Extracting page requirements and assessing eligibility in batches of 3..."
+    },
+    {
+      "agent": "eligibility",
+      "status": "done",
+      "message": "Evaluated eligibility across all 11 opportunities; extracted verified requirements."
+    },
+    {
+      "agent": "ranking",
+      "status": "working",
+      "message": "Selecting and ranking top 5 matching opportunities with deadline verification..."
+    },
+    {
+      "agent": "ranking",
+      "status": "done",
+      "message": "Finalized top 5 ranked scholarship opportunities with strict deadline checks."
+    },
+    {
+      "agent": "sop",
+      "status": "working",
+      "message": "Drafting tailored Statement of Purpose for #1: DAAD Helmut-Schmidt-Programme..."
+    },
+    {
+      "agent": "sop",
+      "status": "done",
+      "message": "Statement of Purpose draft completed and formatted."
+    },
+    {
+      "agent": "final",
+      "data": {
+        "top5": [
+          {
+            "name": "DAAD Helmut-Schmidt-Programme (Public Policy & Good Governance)",
+            "country": "Germany",
+            "fit_score": 94,
+            "funding": "Full tuition waiver + 934 EUR/month stipend, travel allowance & health insurance",
+            "deadline": "31 July 2026",
+            "how_to_apply": "Submit academic transcripts, CV, and letter of motivation via the official DAAD portal and selected German universities.",
+            "why_it_fits": "Strong academic record and demonstrable leadership in open source community projects directly align with the Helmut-Schmidt governance and technology criteria.",
+            "source_url": "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/helmut-schmidt-programme/"
+          },
+          {
+            "name": "Singapore International Graduate Award (SINGA)",
+            "country": "Singapore",
+            "fit_score": 91,
+            "funding": "Full tuition fees + SGD 2,700/month stipend, one-time airfare grant up to SGD 1,500",
+            "deadline": "01 June 2026",
+            "how_to_apply": "Apply through the A*STAR portal; designate research mentors at NUS, NTU, or SUTD.",
+            "why_it_fits": "Extensive practical project portfolio and technical skills provide the necessary foundation for advanced interdisciplinary research in Singapore.",
+            "source_url": "https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa"
+          },
+          {
+            "name": "Vanier Canada Graduate Scholarships",
+            "country": "Canada",
+            "fit_score": 87,
+            "funding": "50,000 CAD per year for up to three years",
+            "deadline": "01 November 2026",
+            "how_to_apply": "Must be nominated by a Canadian institution; initiate application via the ResearchNet portal.",
+            "why_it_fits": "Excellent academic performance and documented initiative in technology projects meet Canada's national academic excellence criteria.",
+            "source_url": "https://vanier.gc.ca/en/home-accueil.html"
+          },
+          {
+            "name": "Heinrich Böll Foundation Scholarships",
+            "country": "Germany",
+            "fit_score": 82,
+            "funding": "934 EUR/month plus various individual allowances",
+            "deadline": "01 September 2026",
+            "how_to_apply": "Apply online via the Heinrich Böll Foundation portal including two expert references and proof of German or English proficiency.",
+            "why_it_fits": "Candidate's socio-technical interests and academic engagement fit the Foundation's commitment to innovation and societal contribution.",
+            "source_url": "https://www.boell.de/en/foundation/scholarships"
+          },
+          {
+            "name": "Ontario Graduate Scholarship (OGS)",
+            "country": "Canada",
+            "fit_score": 79,
+            "funding": "15,000 CAD per year (5,000 CAD per term)",
+            "deadline": "not found",
+            "how_to_apply": "Submit through the graduate studies office of the participating Ontario university where enrolled.",
+            "why_it_fits": "Solid foundation in applied research and coursework aligns with Ontario provincial graduate study standards.",
+            "source_url": "https://osap.gov.on.ca/OSAPPortal/en/A-ZListofAids/PRDR019245.html"
+          }
+        ],
+        "sop": "# Statement of Purpose\n\n### Applying for: DAAD Helmut-Schmidt-Programme (Germany)\n\n**To the Admissions and Selection Committee:**\n\nI am writing to express my strong aspiration to pursue advanced postgraduate studies in Germany under the auspices of the esteemed DAAD Helmut-Schmidt-Programme. In an era where technological infrastructure and public governance are inextricably linked, my academic journey and technical projects have consistently focused on building scalable, transparent digital systems that address meaningful societal challenges. The opportunity to undertake rigorous academic training in Germany represents the natural catalyst for my long-term commitment to public-interest technology.\n\nThroughout my undergraduate studies, I maintained a dedicated focus on core analytical principles, data management, and software design. Beyond theoretical coursework, my practical software development—reflected in multiple publicly available repositories and collaborative initiatives—has allowed me to implement applied data systems from architecture to deployment. These experiences demonstrated firsthand that technical solutions are only as effective as the institutional frameworks and policies governing them.\n\nGermany's renowned leadership in open-source standards, responsible technological innovation, and civic governance makes it the premier destination for my scholarly pursuits. The Helmut-Schmidt-Programme stands apart due to its multidisciplinary curriculum, which equips emerging practitioners with the intersectional competencies needed to evaluate public policy, digital rights, and sustainable governance models. The chance to collaborate with peers and faculty across institutions in Germany will broaden my perspective on international regulatory and technological frameworks.\n\nUpon completion of my studies, I intend to leverage this specialized knowledge to contribute directly to national and international digital modernization initiatives, designing transparent, user-centric public digital goods. The DAAD Helmut-Schmidt-Programme provides precisely the intellectual rigor, global network, and academic foundation required to achieve this vision. Thank you for your consideration of my candidacy."
+      }
+    }
+  ]
+}
